@@ -17,9 +17,9 @@
   font-family: var(--main-font), sans-serif;
   font-variation-settings: var(--main-font-weight);
   background-image: var(--background-gradient);
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -108,23 +108,19 @@
   font-family: var(--accent-font), monospace;
   mix-blend-mode: hard-light;
   opacity: 50%;
-  text-shadow:
-  -1px 0 #fff, 
-  0 1px #fff, 
-  1px 0 #fff, 
-  0 -1px #fff;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__section_watermark {
     -webkit-text-stroke: 1px #fff;
     text-shadow: none;
   }
-} 
+}
 
 .card__title {
   padding: clamp(4px, 5px - 0.3077vw + 1.154px, 5px) 10px;
-  font-variation-settings: 'wght' 715;
+  font-variation-settings: "wght" 715;
   font-size: 18px;
   line-height: 1.2em;
 }
@@ -178,7 +174,7 @@
 }
 
 .translate-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -313,6 +309,12 @@
 
 .page:has(.dialog[open]) {
   overflow: hidden;
+}
+
+@media (width <= 700px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 @media (width <= 375px) {
