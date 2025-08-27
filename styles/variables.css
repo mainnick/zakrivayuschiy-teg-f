@@ -6,10 +6,13 @@
   --button-font-color: #fff;
   --main-font: 'Inter-Variable';
   --main-font-weight: 'wght' 410;
-  --background-gradient: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
-              repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-              linear-gradient(#e7e7e7 0.01%, #1a1a1a);;
+  --background-gradient: repeating-linear-gradient(
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   --block-shrink: clamp(375px, 100vw, 700px);
   --contour-color: #000;
-  --animation-fill-color: #FF0000;
+  --animation-fill-color: #ff0000;
 }
