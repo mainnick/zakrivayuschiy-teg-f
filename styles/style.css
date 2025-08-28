@@ -29,7 +29,7 @@
 
 .header {
   min-inline-size: var(--block-shrink);
-  font-family: var(--accent-font), monospace;
+  font-family: var(--accent-font), fantasy;
   background-color: #fff;
   border: 2px solid #000;
   display: grid;
@@ -50,7 +50,7 @@
 
 .main {
   display: grid;
-  gap: 49.4px;
+  gap: 47.4px;
 }
 
 .card__section {
@@ -70,6 +70,8 @@
   display: block;
   inline-size: 100%;
   block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .image-filter-grayscale {
@@ -105,7 +107,7 @@
   top: 25px;
   right: 25px;
   font-size: 14px;
-  font-family: var(--accent-font), monospace;
+  font-family: var(--accent-font), fantasy;
   mix-blend-mode: hard-light;
   opacity: 50%;
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
@@ -131,10 +133,15 @@
   gap: 25px;
 }
 
+.card__description {
+  line-height: 21px;
+}
+
 .button__list {
   display: flex;
   justify-self: end;
   margin: 25px;
+  gap: 4px;
 }
 
 .button {
@@ -147,7 +154,7 @@
   position: relative;
   overflow: hidden;
   font-size: 14px;
-  font-family: var(--accent-font), monospace;
+  font-family: var(--accent-font), fantasy;
   background-color: var(--button-color);
   border: 2px solid #000;
   cursor: pointer;
@@ -155,7 +162,8 @@
 }
 
 .card__like-button {
-  padding: 10px 35px;
+  padding: 10px;
+  min-inline-size: 130px;
 }
 
 .card__dialog-button {
@@ -192,8 +200,22 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
+  padding: 0;
+  transition: border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 .button__text {
@@ -281,7 +303,8 @@
 }
 
 .dialog[open]::backdrop {
-  background-color: rgb(0 0 0 / 0.7);
+  background-color: #000;
+  opacity: 75%;
 }
 
 .dialog[open] .dialog__text-group {
@@ -292,7 +315,9 @@
 }
 
 .dialog[open] .dialog__text {
-  font-family: var(--accent-font), monospace;
+  font-family: var(--accent-font), fantasy;
+  text-transform: uppercase;
+  line-height: 21px;
   font-size: 14px;
 }
 
@@ -309,12 +334,6 @@
 
 .page:has(.dialog[open]) {
   overflow: hidden;
-}
-
-@media (width <= 700px) {
-  ::-webkit-scrollbar {
-    width: 0;
-  }
 }
 
 @media (width <= 375px) {

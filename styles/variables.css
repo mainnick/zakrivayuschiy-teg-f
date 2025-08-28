@@ -12,7 +12,13 @@
     ),
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
-  --block-shrink: clamp(375px, 100vw, 700px);
+  --block-shrink: clamp(325px, 100vw - 15px, 700px);
   --contour-color: #000;
   --animation-fill-color: #ff0000;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  :root {
+    --block-shrink: clamp(325px, 100vw, 700px);
+  }
 }
